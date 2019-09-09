@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var awesomeMessageLabel: UILabel!
+ 
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,11 +20,15 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showMessagePressed(_ sender: UIButton) {
-        if awesomeMessageLabel.text == "You Are Awesome" {
-            awesomeMessageLabel.text = "You Are Great"
-        }else if awesomeMessageLabel.text == "You Are Great" {
-            awesomeMessageLabel.text = "You Are Amazing"}
-        else {awesomeMessageLabel.text = "You Are Awesome"}
+        let message1 = "You Are Awesome"
+        let message2 = "You Are Great"
+        let message3 = "You Are Amazing"
+        
+        if awesomeMessageLabel.text == message1{
+            awesomeMessageLabel.text = message2
+        }else if awesomeMessageLabel.text == message2 {
+            awesomeMessageLabel.text = message3}
+        else {awesomeMessageLabel.text = message1 }
     }
     
 }
