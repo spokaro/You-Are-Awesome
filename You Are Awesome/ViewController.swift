@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var awesomeMessageLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,12 +18,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showMessagePressed(_ sender: UIButton) {
-        messageLabel.text = "You Are Awesome!"
+        awesomeMessageLabel.text = "You Are Awesome "
    
     }
     
-    @IBAction func showAnotherMessagePressed(_ sender: UIButton) {
-        messageLabel.text = "You Are Great!"
-    }
 }
 
