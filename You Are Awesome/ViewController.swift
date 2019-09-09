@@ -29,6 +29,7 @@ class ViewController: UIViewController {
         }else if awesomeMessageLabel.text == message2 {
             awesomeMessageLabel.text = message3}
         else {awesomeMessageLabel.text = message1 }
+        
     }
     
 }
