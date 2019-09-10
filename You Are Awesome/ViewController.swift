@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var awesomeMessageLable: UILabel!
+    @IBOutlet weak var awesomeMessageLabel: UILabel!
     var index = 0
     
     
@@ -21,7 +21,7 @@ class ViewController: UIViewController {
 
     @IBAction func showMessagePressed(_ sender: UIButton) {
         
-        let messages = ["You Are Awesome!",
+        let messages = ["You Are Awesome",
                         "You Are Great!",
                         "You Are Amazing!",
                         "When the Genius Bar needs help, they call you!",
@@ -32,11 +32,13 @@ class ViewController: UIViewController {
                         "You are killing it",
                         "You got this!"]
         
-        awesomeMessageLable.text = messages[index]
-        if index == messages.count - 1 {
-            index = 0 }
-            else {
-            index = index + 1}
+        awesomeMessageLabel.text = messages.randomElement()!
+        
+//        awesomeMessageLabel.text = messages[index]
+//        if index == messages.count - 1 {
+//            index = 0 }
+//            else {
+//            index = index + 1}
         
 //        let message1 = "You Are Awesome"
 //        let message2 = "You Are Great"
@@ -50,4 +52,5 @@ class ViewController: UIViewController {
 //
 //    }
     
+}
 }
