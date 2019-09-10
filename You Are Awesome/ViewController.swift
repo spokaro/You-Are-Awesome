@@ -32,12 +32,13 @@ class ViewController: UIViewController {
                         "You are killing it",
                         "You got this!"]
         
-        var newIndex = -1
+//        var newIndex = -1
+        var newIndex: Int
         
         repeat {
             newIndex = Int.random(in: 0..<messages.count)
         }while index == newIndex
-        
+         
         index = newIndex
         awesomeMessageLabel.text = messages[index]
         
