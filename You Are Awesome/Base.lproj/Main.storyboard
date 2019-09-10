@@ -27,8 +27,8 @@
                                 <color key="textColor" red="0.54076707359999998" green="0.06243538111" blue="0.042054571210000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILb-1B-jr4">
-                                <rect key="frame" x="155" y="140" width="104" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILb-1B-jr4">
+                                <rect key="frame" x="294" y="140" width="104" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="104" id="43j-3l-SN0"/>
                                     <constraint firstAttribute="height" constant="45" id="fJt-3N-yUn"/>
@@ -38,19 +38,36 @@
                                     <action selector="showMessagePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fZx-RO-8SL"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4lL-as-6Hv">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4lL-as-6Hv">
                                 <rect key="frame" x="16" y="193" width="382" height="633"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play Sound: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doh-lF-DO3">
+                                <rect key="frame" x="20" y="152" width="95" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BYo-tH-PVu">
+                                <rect key="frame" x="123" y="147" width="51" height="31"/>
+                                <connections>
+                                    <action selector="SoundSwitchAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="uT8-h4-gZh"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="4VN-KT-AOG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9Ob-zV-f9F"/>
+                            <constraint firstItem="ILb-1B-jr4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="96" id="9ui-eF-uyy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4VN-KT-AOG" secondAttribute="trailing" constant="16" id="Ch0-aK-eLS"/>
+                            <constraint firstItem="BYo-tH-PVu" firstAttribute="leading" secondItem="doh-lF-DO3" secondAttribute="trailing" constant="8" symbolic="YES" id="HlF-rO-Kee"/>
                             <constraint firstItem="4lL-as-6Hv" firstAttribute="top" secondItem="ILb-1B-jr4" secondAttribute="bottom" constant="8" id="Wbl-Mj-0BN"/>
-                            <constraint firstItem="ILb-1B-jr4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZpY-Ib-Gwn"/>
+                            <constraint firstItem="ILb-1B-jr4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="139" id="ZpY-Ib-Gwn"/>
                             <constraint firstItem="4VN-KT-AOG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="aAd-Va-mFd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4lL-as-6Hv" secondAttribute="bottom" constant="36" id="kJh-hP-GV7"/>
+                            <constraint firstItem="ILb-1B-jr4" firstAttribute="centerY" secondItem="BYo-tH-PVu" secondAttribute="centerY" id="lYI-Qk-ElH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4lL-as-6Hv" secondAttribute="trailing" constant="16" id="myB-1y-0O1"/>
+                            <constraint firstItem="ILb-1B-jr4" firstAttribute="baseline" secondItem="doh-lF-DO3" secondAttribute="firstBaseline" id="rEi-6U-muO"/>
+                            <constraint firstItem="BYo-tH-PVu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="123" id="rI7-C8-dQ1"/>
                             <constraint firstItem="4lL-as-6Hv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ubK-7h-YzX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -58,6 +75,7 @@
                     <connections>
                         <outlet property="awesomeMessageLabel" destination="4VN-KT-AOG" id="fae-cC-sEs"/>
                         <outlet property="imageView" destination="4lL-as-6Hv" id="0Sy-N8-ssZ"/>
+                        <outlet property="soundSwitch" destination="BYo-tH-PVu" id="rdu-Xl-DNp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
