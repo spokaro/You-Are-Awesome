@@ -27,7 +27,7 @@
                                 <color key="textColor" red="0.54076707359999998" green="0.06243538111" blue="0.042054571210000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILb-1B-jr4">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILb-1B-jr4">
                                 <rect key="frame" x="155" y="140" width="104" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="104" id="43j-3l-SN0"/>
@@ -38,7 +38,7 @@
                                     <action selector="showMessagePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fZx-RO-8SL"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image0" translatesAutoresizingMaskIntoConstraints="NO" id="4lL-as-6Hv">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4lL-as-6Hv">
                                 <rect key="frame" x="16" y="193" width="382" height="633"/>
                             </imageView>
                         </subviews>
@@ -57,6 +57,7 @@
                     </view>
                     <connections>
                         <outlet property="awesomeMessageLabel" destination="4VN-KT-AOG" id="fae-cC-sEs"/>
+                        <outlet property="imageView" destination="4lL-as-6Hv" id="0Sy-N8-ssZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -64,7 +65,4 @@
             <point key="canvasLocation" x="137.68115942028987" y="88.392857142857139"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="image0" width="475" height="633"/>
-    </resources>
 </document>
