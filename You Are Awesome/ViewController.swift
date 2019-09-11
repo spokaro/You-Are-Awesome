@@ -82,7 +82,7 @@ class ViewController: UIViewController {
         
       
        
-        if SoundSwitch.isOn {
+        if soundSwitch.isOn {
             soundIndex = nonRepeatingRandom(lastNumber: soundIndex, maxValue: numberOfSounds)
             
             let soundName = "sound\(soundIndex)"
